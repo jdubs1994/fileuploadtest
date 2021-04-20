@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Form>
+      <FormGroup>
+        <Label for="exampleFile">File</Label>
+        <Input type="file" name="file" id="exampleFile" />
+        <FormText color="muted">
+          This is some placeholder block-level help text for the above input.
+          It's a bit lighter and easily wraps to a new line.
+        </FormText>
+      </FormGroup>
+      </Form>
     </div>
   );
 }
